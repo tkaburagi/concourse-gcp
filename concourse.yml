@@ -36,7 +36,7 @@ instance_groups:
 
       external_url: ((external_url))
       basic_auth_username: ciadmin
-      basic_auth_password: NZNRfg0r6crUroqxElxWj-HT-NURmZlH      
+      basic_auth_password: ((concourse_passwd))     
       postgresql:
         database: &db_name atc
         role: &db_role
