@@ -51,9 +51,10 @@ vm_types:
     backend_service: concourse-gcp-backend
 
 vm_extensions:
-- name: concourse
+- name: backend_pool
   cloud_properties:
-    elbs: pcf-router
+    backend_service:
+      name: concourse-gcp-backend
 
 disk_types:
 - name: default
