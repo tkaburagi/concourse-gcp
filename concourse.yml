@@ -26,14 +26,13 @@ instance_groups:
      default: [dns, gateway]
   stemcell: trusty
   vm_type: ((web_vm_type))
+  vm_extensions: [backend_pool]
   jobs:
   - release: concourse
     name: atc
     properties:
       log_level: debug
-
       token_signing_key: ((token_signing_key))
-
       external_url: ((external_url))
       basic_auth_username: ciadmin
       basic_auth_password: ((concourse_passwd))     
